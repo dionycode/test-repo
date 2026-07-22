@@ -16,7 +16,7 @@ The frontend SHALL display the backend health status by calling `GET /api/health
 
 #### Scenario: Health status displayed on page load
 - **WHEN** the frontend page loads
-- **THEN** it SHALL make a `GET` request to `http://localhost:5172/api/health`
+- **THEN** it SHALL make a `GET` request to `http://localhost:5173/api/health`
 - **THEN** the response status SHALL be displayed on the page
 
 ### Requirement: Project builds successfully

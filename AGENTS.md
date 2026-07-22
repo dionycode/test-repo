@@ -1,18 +1,26 @@
 # test-repo
 
-Minimal repository — a single README and `.gitignore`. No build system, no dependencies, no CI, no tests.
+Full-stack todo application with ASP.NET Core backend and React + Vite frontend.
 
 ## Commands
 
-(none — no package manager or build tooling)
+### Backend
+- `dotnet run` — start the API server (from `backend/`)
+- `dotnet test` — run backend tests
+
+### Frontend
+- `npm run dev` — start Vite dev server (from `frontend/`)
+- `npm run build` — production build
+- `npm test` — run frontend tests
 
 ## Structure
 
-- `README.md` — single source of documentation; update as needed
-- `.gitignore` — VS-style ignores `/.vs`
-- No lockfiles, manifests, or config files
+- `backend/` — ASP.NET Core Web API with SQLite
+- `frontend/` — React + Vite SPA
+- `openspec/` — OpenSpec specs and changes
 
 ## Conventions
 
-- Edit files directly; no build/compile step
-- Commit directly to `main`; no branch or PR workflow set up
+- Backend: .NET 9, EF Core with SQLite
+- Frontend: React + TypeScript + Vite
+- Use `git checkout -b` for feature branches; PRs merge to `main`
