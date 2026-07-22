@@ -6,8 +6,8 @@ function App() {
 
   useEffect(() => {
     fetch('/api/health')
-      .then(res => res.json())
-      .then(data => setHealthStatus(data.status))
+      .then(res => res.ok ? res.json() : Promise.reject())
+      .then(data => setHealthStatus(data.status ?? 'unknown'))
       .catch(() => setHealthStatus('unreachable'))
   }, [])
 
